@@ -1,0 +1,19 @@
+.mainContainer {
+  min-height: 50vh;
+  width: 20vw;
+  border: 1px solid black;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+}
+
+.btnContainer {
+  height: auto;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
