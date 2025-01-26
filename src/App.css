@@ -1,19 +1,88 @@
-.mainContainer {
-  min-height: 50vh;
-  width: 20vw;
-  border: 1px solid black;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+.container {
+  background-color: #464242;
+  height: 100vh;
+  width: 100vw;
+}
+
+.subbox {
+  height: 100vh;
+  width: 20%;
+  color: aliceblue;
+  display: flex;
+  font-family: sans-serif;
 
 }
 
-.btnContainer {
-  height: auto;
-  width: 75%;
-  margin: auto;
+
+.box {
   display: flex;
+  background-color: rgb(83, 81, 81);
+  color: aliceblue;
+  border-radius: 3px;
+  font-size: 1.5rem;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: rgb(69, 68, 68);
+  cursor: default
+}
+
+.box-2 {
+  background-color: rgb(69, 68, 68);
+}
+
+.box-2:hover {
+  background-color: rgb(83, 81, 81);
+}
+
+#box-24 {
+  background-color: rgb(243, 135, 104);
+}
+
+.history {
+  margin: 10px 20px 0 0;
+}
+
+.history:hover {
+  cursor: pointer;
+
+}
+
+.history:active {
+  color: rgb(243, 135, 104);
+  text-decoration: underline;
+}
+
+.memory {
+  margin: 10px 20px 0 0;
+}
+
+.memory:hover {
+  cursor: pointer;
+}
+
+.memory:active {
+  color: rgb(243, 135, 104);
+  text-decoration: underline;
+}
+
+@media(max-width:800px) {
+  .subbox {
+    display: none;
+  }
+
+  .answerbox {
+    margin: 0;
+    width: 100%;
+  }
+
 }

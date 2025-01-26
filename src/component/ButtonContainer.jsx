@@ -1,22 +1,31 @@
 import Bottons from "./Bottons";
 import React from "react";
-const ButtonContainer = ({ setVal, val }) => {
-    let btns = ['c', '1', '2', '+', '3', '4', '-', '5', '6', '*', '7', '8', '/', '=', '9', '0', '.'];
-    const onButtonClick = (btnText) => {
+import style from "../component/modules/ButtonContainer.module.css"
+const ButtonContainer = ({ onsetValue, allValue }) => {
 
-        if (btnText === 'c') {
-            setVal("");
+    const setBtnValue = (val) => {
+        if (val === 'C' || val === "CE") {
+            onsetValue("");
         }
-        else if (btnText === '=') {
-            const res = eval(val);
-            setVal(res);
+        else if (val === undefined) {
+            let findDiv = allValue.split("");
+            findDiv.pop()
+            onsetValue(findDiv.join(""))
+
+        }
+        else if (val === '=') {
+            const res = eval(allValue);
+            onsetValue(res);
         } else {
-            const newVal = val + btnText
-            setVal(newVal);
+            const newVal = allValue + val
+            onsetValue(newVal);
+
         }
+
     }
-    return <div className="btnContainer">
-        <Bottons allBtn={btns} onButtonClick={onButtonClick}></Bottons>
+
+    return <div className={style.headbox}>
+        <Bottons btnValue={setBtnValue} />
     </div>
 }
 export default ButtonContainer;
